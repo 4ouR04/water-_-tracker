@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+}
+.subcontainer {
+  width: 85%;
+  width: 100%;
+}
+.header {
+  padding: 1rem;
+  height: 5rem;
+  color: #fff;
+  background-color: #002fa7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input {
+  height: 2rem;
+  width: 20rem;
+  border: none;
+  color: #fff;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 20%;
+  height: 100vh;
+  color: #fff;
+  background-color: #171717;
+  /* background-color: #000000; */
+}
+.sect1 {
+  margin: 0.2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
+  border: 1px solid #2c2e33;
+  /* border-radius: 5px; */
+  background-color: #000000;
+}
+
+.sect2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  border-bottom: 1px solid #2c2e33;
+}
+.sect2 img {
+  border: 1px solid #2c2e33;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.sect3 {
+    margin: 0.3rem;
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background-color: #343434;
+}
+.more{
+    height: 3rem;
+}
+.sect4 {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  width: 100%;
+}
+li {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  /* padding-bottom: 1rem; */
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+li:hover {
+  background-color: #002fa7;
+}
+li i{
+    text-align: center;
+    font-size: 1.7rem;
+    width: 2.85rem;
+    height: 2.85rem;
+    padding: 0.5rem;
+    background-color: #16302a;
+    color: #00d05a;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.bell i{
+    background-color: #322028;
+    color: #fc424a;
+}
+.logo i {
+    font-size: 1.85rem;
+}
+.user p {
+  display: flex;
+  align-items: center;
+}
+.user img {
+  margin-right: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+/* .outlet{
+    height: 2rem;
+    /* background-color: red; */
