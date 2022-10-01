@@ -1,7 +1,7 @@
 <div class="container">
   <div class="nav" *ngIf="displayMode">
     <div class="sect1">
-      <span><h2>Water Bill Tracker</h2></span>
+      <span><h4>Water Bill Tracker</h4></span>
     </div>
 
     <div class="sect2">
@@ -12,23 +12,23 @@
       <p>Amos Mwongela</p>
     </div>
     <div class="sect3">
-      <h3>Navigation</h3>
+      <h5>Navigation</h5>
     </div>
     <div class="sect4">
       <ul>
-        <li>
+        <li routerLink="home" class="home">
           <i class="fa fa-home" aria-hidden="true"></i
-          ><a routerLink="home">Home</a>
+          ><a >Home</a>
         </li>
-        <li>
+        <li  routerLink="records" class="table">
           <i class="fa fa-table" aria-hidden="true"></i
-          ><a routerLink="records">Records</a>
+          ><a>Records</a>
         </li>
-        <li>
+        <li routerLink="new">
           <i class="fa fa-plus-square-o" aria-hidden="true"></i
-          ><a>New Record</a>
+          ><a >New Record</a>
         </li>
-        <li>
+        <li class="chart">
           <i class="fa fa-area-chart" aria-hidden="true"></i><a>Analytics</a>
         </li>
         <li class="bell">
@@ -37,7 +37,7 @@
       </ul>
     </div>
     <div class="sect3 more">
-      <h3>More</h3>
+      <h5>More</h5>
     </div>
     <div>
       <ul>
