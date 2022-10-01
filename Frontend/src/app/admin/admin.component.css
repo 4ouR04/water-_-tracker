@@ -7,7 +7,7 @@
 }
 .header {
   padding: 1rem;
-  height: 5rem;
+  height: 3rem;
   color: #fff;
   background-color: #002fa7;
   display: flex;
@@ -23,21 +23,16 @@ input {
 .nav {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   width: 20%;
-  height: 100vh;
   color: #fff;
   background-color: #171717;
-  /* background-color: #000000; */
 }
 .sect1 {
   margin: 0.2rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
   display: flex;
   align-items: center;
-  height: 4.5rem;
   border: 1px solid #2c2e33;
-  /* border-radius: 5px; */
   background-color: #000000;
 }
 
@@ -46,7 +41,7 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 10rem;
+  padding: 1rem;
   border-bottom: 1px solid #2c2e33;
 }
 .sect2 img {
@@ -86,25 +81,36 @@ a{
     text-decoration: none;
 }
 li:hover {
-  background-color: #002fa7;
+  background-color: #0f1015;
 }
 li i{
     text-align: center;
-    font-size: 1.7rem;
-    width: 2.85rem;
-    height: 2.85rem;
-    padding: 0.5rem;
-    background-color: #16302a;
+    font-size: 0.85rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    padding: 0.8rem;
+    /* background-color: #16302a; */
+    background-color: #292d3a;
     color: #00d05a;
     border-radius: 50%;
     margin-right: 0.5rem;
+    /* opacity: .6; */
+}
+.home i {
+ color: #8f8fe8; 
+}
+.table i{
+  color: #e79d06;
+}
+.chart i {
+  color: #0387d7;
 }
 .bell i{
-    background-color: #322028;
+    /* background-color: #322028; */
     color: #fc424a;
 }
 .logo i {
-    font-size: 1.85rem;
+    font-size: 1.2rem;
 }
 .user p {
   display: flex;
@@ -112,8 +118,8 @@ li i{
 }
 .user img {
   margin-right: 0.5rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
 }
 /* .outlet{

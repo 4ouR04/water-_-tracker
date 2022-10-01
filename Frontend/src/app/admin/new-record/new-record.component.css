@@ -1,0 +1,61 @@
+.container{
+    height: 200%;
+    border: 1px solid black;
+    margin: 1rem;
+
+}
+.fhead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.fhead span{
+    font-size: 1.5rem;
+}
+form {
+  width: 100%;
+      height: 100%;
+
+  padding: 0.4rem;
+  margin: 0.2rem;
+}
+span{
+    color: red;
+}
+.f1 {
+  display: flex;
+  flex-direction: column;
+}
+.f2{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+.f2content{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 2.3rem;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+button{
+    color: #fff;
+    width: 7rem;
+    height: 2.3rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    border: none;
+}
+button i{
+    margin-right: 0.2rem;
+}
+.new{
+    background-color: #00d05a;
+}
+.cancel{
+    background-color: #fc424a;
+}

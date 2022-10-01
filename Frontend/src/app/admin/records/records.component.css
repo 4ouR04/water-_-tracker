@@ -12,11 +12,18 @@ table {
 th,
 td {
   /* color: #627293; */
-  height: 3rem;
+  height: 2.5rem;
   overflow: hidden;
   text-align: left;
-  width: 5%;
+  width: 11%;
   border-bottom: 1px solid #2c2e33;
+}
+.edt{
+  text-align: right;
+}
+th:last-child,td:last-child{
+  /* text-align: right; */
+  /* border: 1px solid black; */
 }
 th {
   font-size: 16px;
@@ -46,3 +53,6 @@ button{
 .delete{
     background-color: #fc424a;
 }
+/* @media only screen and {
+  
+} */
