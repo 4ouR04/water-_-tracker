@@ -8,7 +8,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { NewRecordComponent } from './new-record/new-record.component';
 import { NotificationsComponent } from './notifications/notifications.component';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 const adminRoutes: Routes = [
   {
     path: '',
@@ -44,6 +45,7 @@ const adminRoutes: Routes = [
 
 @NgModule({
   declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent],
-  imports: [CommonModule, RouterModule.forChild(adminRoutes)],
+  imports: [CommonModule, MatButtonModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
+  exports: [MatButtonModule,MatExpansionModule]
 })
 export class AdminModule {}

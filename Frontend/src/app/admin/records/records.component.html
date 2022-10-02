@@ -1,38 +1,54 @@
-<div></div>
-<div class="records">
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Contact</th>
-      <th>Email</th>
-      <th>Meter No</th>
-      <th>Used Units</th>
-      <th>Total Bill</th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td></td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td class="edt"><button class="edit">Edit</button></td>
-      <td><span>|</span> <button class="delete">Delete</button></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td></td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td class="edt"><button class="edit">Edit</button></td>
-      <td><span>|</span> <button class="delete">Delete</button></td>
-    </tr>
-  </table>
+<div>
+  <div class="top">
+    <h4>Clients</h4>
+    <input type="search" placeholder="Search record" />
+  </div>
+  <mat-accordion multi="true">
+    <mat-expansion-panel *ngFor="let record of records">
+      <mat-expansion-panel-header>
+        <!-- <div class="header"> -->
+        <p>{{record.client_name}}</p>
+        <!-- <i>amos@gmail.com</i> -->
+        <!-- </div> -->
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <div class="description">
+          <div class="raw">
+            <h5>Email</h5>
+            <p>{{record.client_email}}</p>
+            <div class="buttons">
+              <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button>
+              <button class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+            </div>
+          </div>
+          <div>
+            <h5>Contact</h5>
+            <p>{{record.client_phone}}</p>
+          </div>
+          <div>
+            <h5>Meter Number</h5>
+            <p>{{record.meter_number}}</p>
+          </div>
+          <div>
+            <h5>Initial Reading</h5>
+            <p>{{record.initial_reading}}</p>
+          </div>
+          <div>
+            <h5>Final Reading</h5>
+            <p>{{record.final_reading}}</p>
+          </div>
+          <div>
+            <h5>Consumed Units</h5>
+            <p>{{record.final_reading}}</p>
+          </div>
+          <div>
+            <h5>Total Bill</h5>
+            <p>{{record.total_bill}}</p>
+            
+          </div>
+         
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
