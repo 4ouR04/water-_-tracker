@@ -8,11 +8,13 @@
 .header {
   padding: 1rem;
   height: 3rem;
-  color: #fff;
-  background-color: #002fa7;
+  color: #000000;
+  /* background-color: #002fa7; */
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 input {
   height: 2rem;
@@ -110,6 +112,7 @@ li i{
     color: #fc424a;
 }
 .logo i {
+  color: #000000;
     font-size: 1.2rem;
 }
 .user p {
@@ -125,3 +128,6 @@ li i{
 /* .outlet{
     height: 2rem;
     /* background-color: red; */
+.outlet{
+  /* background-color: #fbfcfa; */
+}

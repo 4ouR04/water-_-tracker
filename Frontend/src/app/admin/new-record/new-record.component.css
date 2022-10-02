@@ -1,61 +1,72 @@
-.container{
-    height: 200%;
-    border: 1px solid black;
-    margin: 1rem;
+.container {
+  /* height: 200%; */
+  /* border: 1px solid black; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
+  margin: 1rem;
 }
-.fhead{
-    display: flex;
-    justify-content: space-between;
+.fhead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #6ab187; */
+}
+.fhead span {
     margin-bottom: 1rem;
-}
-.fhead span{
-    font-size: 1.5rem;
+  font-size: 1rem;
 }
 form {
   width: 100%;
-      height: 100%;
+  height: 100%;
 
   padding: 0.4rem;
   margin: 0.2rem;
 }
-span{
-    color: red;
+span {
+  color: red;
 }
 .f1 {
   display: flex;
   flex-direction: column;
 }
-.f2{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
+.f2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
 }
-.f2content{
-    display: flex;
-    flex-direction: column;
+.f2content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-input{
-    height: 2.3rem;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+input {
+  border: none;
+  height: 2rem;
+  /* border-radius: 5px; */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #6ab187;
 }
 
-button{
-    color: #fff;
-    width: 7rem;
-    height: 2.3rem;
-    border-radius: 5px;
-    margin-right: 1rem;
-    border: none;
+button {
+  color: #fff;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  border: none;
 }
-button i{
-    margin-right: 0.2rem;
+button i {
+  margin-right: 0.2rem;
 }
-.new{
-    background-color: #00d05a;
+.new {
+  background-color: #00d05a;
 }
-.cancel{
-    background-color: #fc424a;
+.cancel {
+  background-color: #fc424a;
+}
+@media only screen and (max-width: 600px) {
+  .f2 {
+    display: block;
+  }
 }

@@ -1,0 +1,31 @@
+.dashboard {
+  margin: 0.758rem 0.5rem;
+  color: #000000;
+}
+.items {
+  margin-top: 0.4rem;
+  gap: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  background-color: #000000;
+  height: 7rem;
+  width: 25%;
+  padding: 1.5rem;
+}
+.item1 {
+  background-color: #6ab187;
+}
+.item2 {
+  background-color: #a05a;
+}
+.item3 {
+  background-color: #e0b50f;
+  background-color: #d99206;
+}
+.item4 {
+  background-color: #d32d41;
+}
+
