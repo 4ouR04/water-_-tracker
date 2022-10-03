@@ -1,5 +1,12 @@
 <div>
-  <div class="top">
+  <div class="message" *ngIf="message">
+    <h3>{{ message }}</h3>
+  </div>
+  <div class="fallback" *ngIf="records.length <= 0">
+    <h1><i class="fa fa-frown-o" aria-hidden="true"></i> Oops!!</h1>
+    <P>There are no records to display here</P>
+  </div>
+  <div class="top" *ngIf="records.length > 0">
     <h4>Clients</h4>
     <input
       type="search"
@@ -9,7 +16,13 @@
     />
   </div>
   <mat-accordion multi="true">
-    <mat-expansion-panel *ngFor="let record of records | search: filterString">
+    <mat-expansion-panel
+      *ngFor="
+        let record of records
+          | paginate: { itemsPerPage: 4, currentPage: p }
+          | search: filterString
+      "
+    >
       <mat-expansion-panel-header>
         <p>{{ record.client_name }}</p>
       </mat-expansion-panel-header>
@@ -22,7 +35,7 @@
               <button class="edit">
                 <i class="fa fa-pencil" aria-hidden="true"></i>Edit
               </button>
-              <button class="delete">
+              <button class="delete" (click)="onDelete(record.id)">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>Delete
               </button>
             </div>
@@ -59,11 +72,16 @@
       </mat-panel-description>
     </mat-expansion-panel>
     <mat-paginator
+      *ngIf="records.length > 0"
       [length]="10"
       [pageSize]="4"
-      [pageSizeOptions]="[4,6,8,10]"
+      [pageSizeOptions]="[4, 6, 8, 10]"
       aria-label="Select page"
     >
     </mat-paginator>
+    <!-- <pagination-controls
+        (pageChange)="p = $event"
+        ngClass="controls"
+      ></pagination-controls> -->
   </mat-accordion>
 </div>

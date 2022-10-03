@@ -7,9 +7,12 @@ import { IRecord } from 'src/app/Models/record-model';
   styleUrls: ['./records.component.css'],
 })
 export class RecordsComponent implements OnInit {
+  message: string = ''
+  p: number = 1;
   filterString: string = '';
   records: IRecord[] = [
     {
+      id: 1,
       client_name: 'Amos Mwongela',
       client_phone: '+254 742971932',
       client_email: 'amos@gmail.com',
@@ -21,6 +24,7 @@ export class RecordsComponent implements OnInit {
       status: 'Pending',
     },
     {
+      id: 2,
       client_name: 'Evans Mwangangi',
       client_phone: '+254 742971932',
       client_email: 'evans@gmail.com',
@@ -34,5 +38,23 @@ export class RecordsComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  onDelete(id: number) {
+    this.records = this.records.filter(el => {
+      return el.id != id
+    })
+    this.message = 'Record deleted successfully'
+    setTimeout(() => {
+      this.message = ''
+    },4000)
+  }
+  onEdit(id: number) {
+    let updated = this.records.filter(el => {
+      return el.id == id
+    })
+    this.message = 'Record update successfully'
+    setTimeout(() => {
+      this.message = '';
+    }, 4000);
+  }
 }
