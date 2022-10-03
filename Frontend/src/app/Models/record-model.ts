@@ -7,4 +7,5 @@ export interface IRecord{
     final_reading: string
     consumed_units: string
     total_bill: string
+    status: string
 }

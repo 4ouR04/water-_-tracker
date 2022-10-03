@@ -7,6 +7,7 @@ import { IRecord } from 'src/app/Models/record-model';
   styleUrls: ['./records.component.css'],
 })
 export class RecordsComponent implements OnInit {
+  filterString: string = '';
   records: IRecord[] = [
     {
       client_name: 'Amos Mwongela',
@@ -17,6 +18,7 @@ export class RecordsComponent implements OnInit {
       final_reading: '987',
       consumed_units: '0987',
       total_bill: '8765',
+      status: 'Pending',
     },
     {
       client_name: 'Evans Mwangangi',
@@ -27,6 +29,7 @@ export class RecordsComponent implements OnInit {
       final_reading: '987',
       consumed_units: '0987',
       total_bill: '8765',
+      status: 'Cleared',
     },
   ];
   constructor() {}
