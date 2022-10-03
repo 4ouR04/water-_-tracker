@@ -1,52 +1,55 @@
 <div>
   <div class="top">
     <h4>Clients</h4>
-    <input type="search" placeholder="Search record" />
+    <input type="search" name="search" placeholder="Search record" [(ngModel)]="filterString"/>
   </div>
   <mat-accordion multi="true">
-    <mat-expansion-panel *ngFor="let record of records">
+    <mat-expansion-panel *ngFor="let record of records | search : filterString">
       <mat-expansion-panel-header>
-        <!-- <div class="header"> -->
-        <p>{{record.client_name}}</p>
-        <!-- <i>amos@gmail.com</i> -->
-        <!-- </div> -->
+        <p>{{ record.client_name }}</p>
       </mat-expansion-panel-header>
       <mat-panel-description>
         <div class="description">
           <div class="raw">
             <h5>Email</h5>
-            <p>{{record.client_email}}</p>
+            <p>{{ record.client_email }}</p>
             <div class="buttons">
-              <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button>
-              <button class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+              <button class="edit">
+                <i class="fa fa-pencil" aria-hidden="true"></i>Edit
+              </button>
+              <button class="delete">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete
+              </button>
             </div>
           </div>
           <div>
             <h5>Contact</h5>
-            <p>{{record.client_phone}}</p>
+            <p>{{ record.client_phone }}</p>
           </div>
           <div>
             <h5>Meter Number</h5>
-            <p>{{record.meter_number}}</p>
+            <p>{{ record.meter_number }}</p>
           </div>
           <div>
             <h5>Initial Reading</h5>
-            <p>{{record.initial_reading}}</p>
+            <p>{{ record.initial_reading }}</p>
           </div>
           <div>
             <h5>Final Reading</h5>
-            <p>{{record.final_reading}}</p>
+            <p>{{ record.final_reading }}</p>
           </div>
           <div>
             <h5>Consumed Units</h5>
-            <p>{{record.final_reading}}</p>
+            <p>{{ record.final_reading }}</p>
           </div>
           <div>
             <h5>Total Bill</h5>
-            <p>{{record.total_bill}}</p>
-            
+            <p>{{ record.total_bill }}</p>
           </div>
-         
+          <div>
+            <h5>Bill Status</h5>
+            <p>{{ record.status }}</p>
+          </div>
         </div>
       </mat-panel-description>
     </mat-expansion-panel>

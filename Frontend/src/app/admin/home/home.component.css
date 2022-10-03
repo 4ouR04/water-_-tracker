@@ -14,6 +14,11 @@
   height: 7rem;
   width: 25%;
   padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.item i{
+  font-size: 2rem;
 }
 .item1 {
   background-color: #6ab187;
@@ -28,4 +33,12 @@
 .item4 {
   background-color: #d32d41;
 }
-
+@media only screen and (max-width: 600px){
+  .items{
+    width: 100%;
+    flex-direction: column;
+  }
+  .item{
+    width: 100%;
+  }
+}

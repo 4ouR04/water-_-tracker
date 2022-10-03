@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -10,6 +11,8 @@ import { NewRecordComponent } from './new-record/new-record.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 const adminRoutes: Routes = [
   {
     path: '',
@@ -45,7 +48,7 @@ const adminRoutes: Routes = [
 
 @NgModule({
   declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent],
-  imports: [CommonModule, MatButtonModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
+  imports: [CommonModule,  FormsModule,ReactiveFormsModule,MatButtonModule,SharedModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
   exports: [MatButtonModule,MatExpansionModule]
 })
 export class AdminModule {}
