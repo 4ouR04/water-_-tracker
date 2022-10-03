@@ -1,10 +1,15 @@
 <div>
   <div class="top">
     <h4>Clients</h4>
-    <input type="search" name="search" placeholder="Search record" [(ngModel)]="filterString"/>
+    <input
+      type="search"
+      name="search"
+      placeholder="Search record"
+      [(ngModel)]="filterString"
+    />
   </div>
   <mat-accordion multi="true">
-    <mat-expansion-panel *ngFor="let record of records | search : filterString">
+    <mat-expansion-panel *ngFor="let record of records | search: filterString">
       <mat-expansion-panel-header>
         <p>{{ record.client_name }}</p>
       </mat-expansion-panel-header>
@@ -53,5 +58,12 @@
         </div>
       </mat-panel-description>
     </mat-expansion-panel>
+    <mat-paginator
+      [length]="10"
+      [pageSize]="4"
+      [pageSizeOptions]="[4,6,8,10]"
+      aria-label="Select page"
+    >
+    </mat-paginator>
   </mat-accordion>
 </div>

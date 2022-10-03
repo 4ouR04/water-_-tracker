@@ -11,6 +11,7 @@ import { NewRecordComponent } from './new-record/new-record.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 const adminRoutes: Routes = [
@@ -48,7 +49,7 @@ const adminRoutes: Routes = [
 
 @NgModule({
   declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent],
-  imports: [CommonModule,  FormsModule,ReactiveFormsModule,MatButtonModule,SharedModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
+  imports: [CommonModule,  FormsModule,ReactiveFormsModule,MatButtonModule,MatPaginatorModule,SharedModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
   exports: [MatButtonModule,MatExpansionModule]
 })
 export class AdminModule {}
