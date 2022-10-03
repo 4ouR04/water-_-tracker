@@ -1,4 +1,5 @@
 export interface IRecord{
+    id: number
     client_name: string
     client_phone: string
     client_email?: string

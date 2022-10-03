@@ -12,8 +12,10 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditRecordComponent } from './edit-record/edit-record.component';
 const adminRoutes: Routes = [
   {
     path: '',
@@ -48,8 +50,8 @@ const adminRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent],
-  imports: [CommonModule,  FormsModule,ReactiveFormsModule,MatButtonModule,MatPaginatorModule,SharedModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
+  declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent, EditRecordComponent],
+  imports: [CommonModule,  FormsModule,ReactiveFormsModule,MatButtonModule,MatPaginatorModule,NgxPaginationModule,SharedModule, MatExpansionModule,RouterModule.forChild(adminRoutes)],
   exports: [MatButtonModule,MatExpansionModule]
 })
 export class AdminModule {}
