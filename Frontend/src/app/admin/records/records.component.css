@@ -1,78 +1,78 @@
-:host{
+:host {
   display: block;
   margin: 0.5rem;
 }
-.message{
+.mycont {
+  background-color: #171717;
   margin: 1rem 0;
+  border-radius: 6px;
+}
+.message {
   height: 4rem;
   color: #00d05a;
+  border-radius: 6px;
   background-color: #16302a !important;
   display: flex;
-  /* align-items: center; */
   padding: 1.2rem;
   justify-content: center;
-  border-radius: 5px;
 }
-.fallback{
+.fallback {
   padding: 1rem;
   height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  
 }
-.top{
+.top {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #6ab187;
 }
-.top input{
+.top input {
   height: 2rem;
   padding: 1rem;
   border-radius: 5px;
   border: 1px solid #6ab187;
 }
-.header{
+.header {
   display: flex;
   flex-direction: column;
 }
-.description{
+.description {
   /* overflow-x: scroll; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
-.raw{
-  
+.raw {
 }
-.buttons{
+.buttons {
   display: flex;
   gap: 0.5rem;
 }
-.buttons button{
+.buttons button {
   color: #fff !important;
   height: 2rem;
   width: 5rem;
   border-radius: 5px;
   border: none;
 }
-mat-expansion-panel{
+mat-expansion-panel {
   margin-bottom: 1rem;
 }
-button i{
+button i {
   margin-right: 0.5rem;
 }
-.edit{
+.edit {
   background-color: #00d05a;
 }
-.delete{
+.delete {
   background-color: #fc424a;
 }
-@media only screen and (max-width: 600px){
-  .description{
+@media only screen and (max-width: 600px) {
+  .description {
     overflow-x: scroll;
   }
 }
