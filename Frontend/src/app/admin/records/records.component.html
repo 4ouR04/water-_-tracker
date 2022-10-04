@@ -1,6 +1,8 @@
 <div>
-  <div class="message" *ngIf="message">
-    <h3>{{ message }}</h3>
+  <div class="mycont" *ngIf="message">
+    <div class="message" >
+      <h3>{{ message }}</h3>
+    </div>
   </div>
   <div class="fallback" *ngIf="records.length <= 0">
     <h1><i class="fa fa-frown-o" aria-hidden="true"></i> Oops!!</h1>

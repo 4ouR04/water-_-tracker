@@ -43,7 +43,7 @@ export class RecordsComponent implements OnInit {
     this.records = this.records.filter(el => {
       return el.id != id
     })
-    this.message = 'Record deleted successfully'
+    this.message = 'Record deleted successfully.'
     setTimeout(() => {
       this.message = ''
     },4000)
@@ -52,7 +52,7 @@ export class RecordsComponent implements OnInit {
     let updated = this.records.filter(el => {
       return el.id == id
     })
-    this.message = 'Record update successfully'
+    this.message = 'Record update successfully.'
     setTimeout(() => {
       this.message = '';
     }, 4000);
