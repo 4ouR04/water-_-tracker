@@ -1,4 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
+import { identity } from 'rxjs';
 import { AppService } from './app.service';
 
 @Controller()
@@ -8,5 +9,10 @@ export class AppController {
   @Get()
   getClients(): string {
     return this.appService.getClients();
+  }
+
+  @Get(':id')
+  getClient(@Param('id') clientId:string) {
+    
   }
 }
