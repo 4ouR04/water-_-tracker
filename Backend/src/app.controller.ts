@@ -1,5 +1,4 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { identity } from 'rxjs';
 import { AppService } from './app.service';
 
 @Controller()
@@ -15,4 +14,10 @@ export class AppController {
   getClient(@Param('id') clientId:string) {
     
   }
+  @Get()
+  signUp() {
+    
+  }
+
+
 }
