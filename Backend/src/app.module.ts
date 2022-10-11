@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { BillsModule } from './bills/bills.module';
 import { ClientsModule } from './clients/clients.module';
+import { SharedModule } from './shared/shared.module';
 import config from './config/keys'
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import config from './config/keys'
     BillsModule,
     ClientsModule,
     MongooseModule.forRoot(config.URI),
+    SharedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
