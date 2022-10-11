@@ -7,7 +7,10 @@ import { IUser } from 'src/shared/interfaces/user.interface';
 export class AuthService {
     constructor(@InjectModel('user') private readonly userModel: Model<IUser>) { }
     
-    async findOne(id: string): Promise<IUser> {
+    async signup(user: IUser) {
+        
+    }
+    async login(email: string): Promise<IUser> {
         return 
     }
 }
