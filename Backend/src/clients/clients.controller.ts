@@ -1,12 +1,10 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { AppService } from 'src/app.service';
 
 @Controller('clients')
 export class ClientsController {
-  constructor(private readonly appService: AppService) {}
+  constructor() {}
   @Get()
-  getClients(): string {
-    return this.appService.getClients();
+  getClients() {
   }
 
   @Get(':id')
