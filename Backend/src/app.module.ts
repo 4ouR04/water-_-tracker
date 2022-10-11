@@ -6,7 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { BillsModule } from './bills/bills.module';
 import { ClientsModule } from './clients/clients.module';
 import { SharedModule } from './shared/shared.module';
-import config from './config/keys'
+import config from './shared/config/keys'
 @Module({
   imports: [
     AuthModule,
