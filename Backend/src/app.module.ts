@@ -1,20 +1,20 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MongooseModule } from '@nestjs/mongoose';
-import { AuthModule } from './auth/auth.module';
-import { BillsModule } from './bills/bills.module';
+import { Client} from './typeorm/entities/client';
 import { ClientsModule } from './clients/clients.module';
-import { SharedModule } from './shared/shared.module';
-import config from './shared/config/keys'
+
 @Module({
-  imports: [
-    AuthModule,
-    BillsModule,
-    ClientsModule,
-    MongooseModule.forRoot(config.URI),
-    SharedModule,
-  ],
+  imports: [TypeOrmModule.forRoot({
+    type: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    username: 'root',
+    database: 'Water_Tracker',
+    entities: [Client],
+    synchronize: true
+  }), ClientsModule],
   controllers: [AppController],
   providers: [AppService],
 })
