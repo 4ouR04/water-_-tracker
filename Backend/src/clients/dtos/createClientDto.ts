@@ -1,7 +1,6 @@
-export interface IUser {
-    _id: string
+export class CreateClientDto {
     name: string
+    tel: number
     email: string
-    tel: string
     password: string
 }
