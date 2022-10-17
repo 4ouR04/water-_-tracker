@@ -18,5 +18,8 @@ export class ClientsService {
   }
     findClients() {
      return this.clientRepository.find()
-  }
+    }
+    updateClient() {
+        
+    }
 }
