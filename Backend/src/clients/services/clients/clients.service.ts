@@ -16,7 +16,7 @@ export class ClientsService {
     });
     return this.clientRepository.save(newClient);
   }
-    findClients() {
+    findClient() {
      return this.clientRepository.find()
     }
     updateClient() {
