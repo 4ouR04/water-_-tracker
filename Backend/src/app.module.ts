@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Client} from './typeorm/entities/client';
 import { ClientsModule } from './clients/clients.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -14,7 +15,7 @@ import { ClientsModule } from './clients/clients.module';
     database: 'Water_Tracker',
     entities: [Client],
     synchronize: true
-  }), ClientsModule],
+  }), ClientsModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
