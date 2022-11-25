@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="container my-3 d-flex justify-content-center">
+  <div class="row">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="alert alert-danger text-center" role="alert">
+        Login Failed!
+      </div>
+      <div class="mt-10">
+        <h2 class="fw-bold text-center">W4t3R TR4Ck3R</h2>
+      </div>
+      <label for="" class="form-label w-10" *ngIf="!isLoginMode">Name</label>
+      <input type="text" class="form-control" placeholder="Enter username" name="username" ngModel required *ngIf="!isLoginMode" />
+      <label for="" class="form-label" *ngIf="!isLoginMode">Phone number</label>
+      <input type="text" class="form-control" placeholder="Enter phone" name="tel" ngModel required *ngIf="!isLoginMode"/>
+      <label for="" class="form-label">Email adress</label>
+      <input type="text" class="form-control" placeholder="Enter email" name="email" ngModel required/>
+      <label for="Password" class="form-label">Password</label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        class="form-control"
+        ngModel
+        name="password"
+        required=""
+      />
+      <div>
+        <p>
+          By signing Up you accept our terms of use
+          <span><a href="">Terms Of Use</a></span>
+        </p>
+      </div>
+      <button class="btn btn-primary w-100" [disabled]="!f.valid">{{isLoginMode ? 'Login' : 'Sign Up'}}</button>
+      <p class="text-center line"><span>OR</span></p>
+      <button class="btn btn-outline-dark w-100">
+        {{isLoginMode ? 'Signin Using Google' : 'Signup Using Google'}}
+      </button>
+      <p class="m-t-1" *ngIf="isLoginMode">
+        Dont have an account? <span (click)="onSwitch()">Sign up here</span>
+      </p>
+    </form>
+  </div>
+</div>

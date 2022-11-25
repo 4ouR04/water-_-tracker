@@ -1,4 +1,4 @@
-.container {
+.main {
   display: flex;
 }
 .subcontainer {
@@ -101,7 +101,7 @@ li i{
 .home i {
  color: #8f8fe8; 
 }
-.table i{
+.record-icon i{
   color: #e79d06;
 }
 .chart i {
