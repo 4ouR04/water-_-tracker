@@ -1,4 +1,4 @@
-.container {
+.main {
   display: flex;
 }
 .subcontainer {
@@ -26,6 +26,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 20%;
+  height: fit-content;
   color: #fff;
   background-color: #171717;
 }
@@ -33,11 +34,15 @@ input {
   margin: 0.2rem;
   padding: 0.7rem;
   display: flex;
+  height: 4rem;
   align-items: center;
+  justify-content: center;
   border: 1px solid #2c2e33;
   background-color: #000000;
 }
-
+.close{
+  display: none;
+}
 .sect2 {
   display: flex;
   flex-direction: column;
@@ -101,7 +106,7 @@ li i{
 .home i {
  color: #8f8fe8; 
 }
-.table i{
+.record-icon i{
   color: #e79d06;
 }
 .chart i {
@@ -128,6 +133,34 @@ li i{
 /* .outlet{
     height: 2rem;
     /* background-color: red; */
-.outlet{
-  /* background-color: #fbfcfa; */
+@media screen and (max-width: 600px) {
+  .nav{
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9) ;
+    width: fit-content;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .sect2 {
+    display: none;
+  }
+  .close{
+    display: flex;
+  }
+  .close i{
+    font-size: 2rem;
+  }
+  .sect1{
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
 }
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */

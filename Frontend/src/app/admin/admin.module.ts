@@ -15,11 +15,14 @@ import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditRecordComponent } from './edit-record/edit-record.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import {HttpClientModule}  from '@angular/common/http'
+import { AdminService } from './services/admin.service';
 
 
 @NgModule({
+  providers: [AdminService],
   declarations: [AdminComponent, RecordsComponent, HomeComponent, SettingsComponent, AnalyticsComponent, NewRecordComponent, EditRecordComponent],
-  imports: [CommonModule,  AdminRoutingModule,FormsModule,ReactiveFormsModule,MatButtonModule,MatPaginatorModule,NgxPaginationModule,SharedModule, MatExpansionModule],
+  imports: [CommonModule, HttpClientModule,SharedModule, AdminRoutingModule,FormsModule,ReactiveFormsModule,MatButtonModule,MatPaginatorModule,NgxPaginationModule,SharedModule, MatExpansionModule],
   exports: [MatButtonModule,MatExpansionModule]
 })
 export class AdminModule {}

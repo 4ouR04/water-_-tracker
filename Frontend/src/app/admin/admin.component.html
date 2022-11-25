@@ -1,7 +1,10 @@
-<div class="container">
+<div class="main">
   <div class="nav" *ngIf="displayMode">
     <div class="sect1">
-      <span><h4>Water Bill Tracker</h4></span>
+      <div>
+        <h4>Water Bill Tracker</h4>
+      </div>
+      <div class="close" (click)="switchMode()"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
     </div>
 
     <div class="sect2">
@@ -17,16 +20,14 @@
     <div class="sect4">
       <ul>
         <li routerLink="home" class="home">
-          <i class="fa fa-home" aria-hidden="true"></i
-          ><a >Home</a>
+          <i class="fa fa-home" aria-hidden="true"></i><a>Home</a>
         </li>
-        <li  routerLink="records" class="table">
-          <i class="fa fa-table" aria-hidden="true"></i
-          ><a>Records</a>
+        <li routerLink="records" class="record-icon">
+          <i class="fa fa-table" aria-hidden="true"></i><a>Records</a>
         </li>
         <li routerLink="new">
           <i class="fa fa-plus-square-o" aria-hidden="true"></i
-          ><a >New Record</a>
+          ><a>New Record</a>
         </li>
         <li class="chart">
           <i class="fa fa-area-chart" aria-hidden="true"></i><a>Analytics</a>
@@ -45,7 +46,9 @@
           <i class="fa fa-sliders" aria-hidden="true"></i> <a>Settings</a>
         </li>
 
-        <li class="bell"><i class="fa fa-sign-out" aria-hidden="true"></i> <a>Logout</a></li>
+        <li class="bell">
+          <i class="fa fa-sign-out" aria-hidden="true"></i> <a>Logout</a>
+        </li>
       </ul>
     </div>
   </div>

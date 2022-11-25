@@ -14,7 +14,8 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     CommonModule
   ],
   exports: [
-    SearchPipe
+    SearchPipe,
+    
   ]
 })
 export class SharedModule { }

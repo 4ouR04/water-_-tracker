@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IRecord } from 'src/app/Models/record-model';
+import { IRecord } from 'src/app/shared/Models/record-model';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-records',
@@ -36,9 +37,11 @@ export class RecordsComponent implements OnInit {
       status: 'Cleared',
     },
   ];
-  constructor() {}
+  constructor(private dataService: AdminService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.dataService.fetchData().subscribe(data=> console.log(data))
+  }
   onDelete(id: number) {
     this.records = this.records.filter(el => {
       return el.id != id

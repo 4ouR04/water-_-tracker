@@ -1,29 +1,29 @@
-<div class="container">
-  <form>
+<div class="main">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <div class="fhead">
       <h4>New client</h4>
       <span><i class="fa fa-times" aria-hidden="true"></i> </span>
     </div>
     <div class="f1">
       <label for="">Name <span>*</span></label>
-      <input type="text" placeholder="Client name" required />
+      <input type="text" placeholder="Client name" required name="client_name" ngModel/>
       <label for="">Contact <span>*</span></label>
-      <input type="text" placeholder="Client tel" />
+      <input type="text" placeholder="Client tel" name="client_phone" ngModel/>
       <label for="">Email <span>*</span></label>
-      <input type="text" placeholder="Client email" />
+      <input type="text" placeholder="Client email" name="client_email" ngModel/>
     </div>
     <div class="f2">
       <div class="f2content">
         <label for="">Meter Number <span>*</span></label>
-        <input type="text" placeholder="Meter number" />
+        <input type="text" placeholder="Meter number" name="meter_number" ngModel />
       </div>
       <div class="f2content">
         <label for="">Consumed Units <span>*</span></label>
-        <input type="text" placeholder="Consumed units" />
+        <input type="text" placeholder="Consumed units" name="consumed_units" ngModel />
       </div>
       <div class="f2content">
         <label for="">Total Bill <span>*</span></label>
-        <input type="text" placeholder="Bill" />
+        <input type="text" placeholder="Bill" name="total_bill" ngModel/>
       </div>
       <div class="f2content">
         <label for="">Due Date <span>*</span></label>

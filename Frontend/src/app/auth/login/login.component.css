@@ -1,0 +1,23 @@
+
+p{
+    margin-top: 1rem;
+}
+.line {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ .line span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+.btn-primary{
+    margin-bottom: 1rem;
+}
+.btn-outline-dark{
+    margin-top: 0.7rem;
+
+}
