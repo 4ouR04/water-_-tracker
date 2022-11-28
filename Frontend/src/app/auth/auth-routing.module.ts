@@ -6,10 +6,6 @@ const authRoutes: Routes = [
     path: '',
     component: AuthComponent
   },
-//   {
-//     path: '',
-//     redirectTo: 'auth'
-//   }
 ];
 
 @NgModule({
