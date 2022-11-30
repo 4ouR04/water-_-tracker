@@ -33,7 +33,7 @@
       <button class="btn btn-outline-dark w-100">
         {{isLoginMode ? 'Signin Using Google' : 'Signup Using Google'}}
       </button>
-      <p class="m-t-1" >  {{isLoginMode ? 'Dont have an account?' : 'Already have an account?'}} <span (click)="onSwitch()" class="link-primary">Sign up here</span>
+      <p class="m-t-1" >  {{isLoginMode ? 'Dont have an account?' : 'Already have an account?'}} <span (click)="onSwitch()" class="link-primary" role="button">{{isLoginMode? 'Sign up here' : 'Signin here'}}</span>
       </p>
     </form>
   </div>

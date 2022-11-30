@@ -1,7 +1,7 @@
 <div>
   <div class="mycont" *ngIf="message">
-    <div class="message" >
-      <h3>{{ message }}</h3>
+    <div class="message alert alert-success" >
+      {{ message }}
     </div>
   </div>
   <div class="fallback" *ngIf="records.length <= 0">

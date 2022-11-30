@@ -6,7 +6,7 @@ import { catchError, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  url: string = '';
+  url: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDntD4AyLHBuooMFRFR58oXKkzNGxEPJ60';
   constructor(private http: HttpClient) {}
   login() {}
   signup(email: string, password: string) {
