@@ -1,0 +1,29 @@
+nav{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: normal;
+}
+button{
+    border-radius: 3px;
+
+}
+.btn-success{
+    width: 8rem;
+    margin-right: 1.5rem;
+}
+.btn-outline-success{
+    width: 11rem;
+}
+p{
+    font-size: 1.5rem;
+    line-height: normal;
+}
+.sponsor-project{
+    width: fit-content;
+}
+.img{
+    padding: 7rem;
+}
