@@ -1,11 +1,11 @@
 <div class="container my-3 d-flex justify-content-center">
   <div class="row">
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-      <div class="alert alert-danger text-center" role="alert">
-        Login Failed!
+      <div class="alert alert-danger text-center" role="alert" *ngIf="message">
+        {{message}}
       </div>
       <div class="mt-10">
-        <h2 class="fw-bold text-center">W4t3R TR4Ck3R</h2>
+        <h2 class="fw-bold text-center">PROLIFIC CONSULTANCIES</h2>
       </div>
       <label for="" class="form-label w-10" *ngIf="!isLoginMode">Name</label>
       <input type="text" class="form-control" placeholder="Enter username" name="username" ngModel required *ngIf="!isLoginMode" />
