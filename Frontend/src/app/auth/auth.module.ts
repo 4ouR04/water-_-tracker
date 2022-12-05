@@ -5,6 +5,7 @@ import {AuthRoutingModule} from './auth-routing.module';
 import { LoginComponent } from './login/login.component'
 import { FormsModule } from '@angular/forms';
 import {AuthService} from './services/auth.service'
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {AuthService} from './services/auth.service'
     LoginComponent,
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     AuthRoutingModule,
     FormsModule
