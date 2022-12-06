@@ -69,7 +69,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Frontend:build:production"
+              "browserTarget": "WaterTracker:build:production"
             },
             "development": {
               "browserTarget": "Frontend:build:development"
