@@ -26,30 +26,29 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/auth/login']);
   }
   onSubmit(f: NgForm) {
-    this.route.params.subscribe((params) => {
-      this.mode = params['mode'];
-    });
+    this.checkAuthMode();
 
     if (this.mode == 'signup') {
       this.authObservable = this.auth.signup(f.value.email, f.value.password);
     } else if (this.mode == 'login') {
       console.log(f.value);
       this.authObservable = this.auth.login(f.value.email, f.value.password);
+      this.router.navigate(['/admin/dashboard'])
     }
 
     this.authObservable.subscribe(
       (resp) => {
-        console.log(resp)
+        console.log(resp);
       },
       (errorMessage) => {
         this.message = errorMessage;
       }
     );
   }
+
   onSwitch() {
-    this.route.params.subscribe((params) => {
-      this.mode = params['mode'];
-    });
+    this.checkAuthMode();
+
     if (this.mode == 'login') {
       this.router.navigate(['/auth/signup'], {});
       this.isLoginMode = !this.isLoginMode;
@@ -57,5 +56,11 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/auth/login'], {});
       this.isLoginMode = !this.isLoginMode;
     }
+  }
+  
+  checkAuthMode() {
+    this.route.params.subscribe((params) => {
+      this.mode = params['mode'];
+    });
   }
 }
