@@ -12,8 +12,8 @@ export class ClientsController {
   }
 
   @Post()
-  createClient(@Body() createClientDto: CreateClientDto) {
-   return this.clientsService.createClient(createClientDto);
+  createClient(@Body() clientInformation: CreateClientDto) {
+   return this.clientsService.createClient(clientInformation);
   }
     @Patch()
     updateClientById(@Param('id ', ParseIntPipe) id: number) {
