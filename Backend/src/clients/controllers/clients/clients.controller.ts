@@ -7,7 +7,7 @@ export class ClientsController {
   constructor(private clientsService: ClientsService) {}
   @Get()
   async getClients() {
-    const clients = await this.clientsService.findClients();
+    const clients = await this.clientsService.findClient();
     return clients;
   }
 
@@ -15,6 +15,7 @@ export class ClientsController {
   createClient(@Body() clientInformation: CreateClientDto) {
    return this.clientsService.createClient(clientInformation);
   }
+
     @Patch()
     updateClientById(@Param('id ', ParseIntPipe) id: number) {
         return this.clientsService.updateClient()
