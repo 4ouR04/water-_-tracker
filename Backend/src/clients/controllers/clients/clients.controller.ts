@@ -4,7 +4,9 @@ import { ClientsService } from 'src/clients/services/clients/clients.service';
 
 @Controller('clients')
 export class ClientsController {
-  constructor(private clientsService: ClientsService) {}
+  constructor(private clientsService: ClientsService) {
+    
+   }
   @Get()
   async getClients() {
     const clients = await this.clientsService.findClient();
@@ -13,11 +15,11 @@ export class ClientsController {
 
   @Post()
   createClient(@Body() clientInformation: CreateClientDto) {
-   return this.clientsService.createClient(clientInformation);
+    return this.clientsService.createClient(clientInformation);
   }
 
-    @Patch()
-    updateClientById(@Param('id ', ParseIntPipe) id: number) {
-        return this.clientsService.updateClient()
-    }
+  @Patch()
+  updateClientById(@Param('id ', ParseIntPipe) id: number) {
+    return this.clientsService.updateClient()
+  }
 }
